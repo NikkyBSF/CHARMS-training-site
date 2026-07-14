@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CHARMS Training - Access Required</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="Java.js"></script>
+    </head>
+    <body class="landing-body">
+        <main class="landing-container">
+            <div class="landing-card">
+                <img src="Images/logo-blueSky.svg" alt="Blue Sky Logo" class="landing-logo">
+                <h1>Blue Sky Fostering CHARMS Training</h1>
+                <p class="landing-intro">Enter the password to continue to the training site.</p>
+
+                <form id="landing-form" class="landing-form">
+                    <label for="site-password">Password</label>
+                    <input type="password" id="site-password" name="site-password" autocomplete="current-password" required>
+                    <button type="submit">Continue</button>
+                </form>
+
+                <p id="landing-error" class="landing-error" role="alert"></p>
+            </div>
+        </main>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const form = document.getElementById('landing-form');
+                const passwordInput = document.getElementById('site-password');
+                const errorBox = document.getElementById('landing-error');
+
+                if (!form || !passwordInput || !errorBox) {
+                    return;
+                }
+
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    const enteredPassword = passwordInput.value.trim();
+                    if (window.checkSitePassword(enteredPassword)) {
+                        window.authorizeSite();
+                        window.location.replace(window.getSiteRedirectTarget());
+                    } else {
+                        errorBox.textContent = 'That password was incorrect. Please try again.';
+                        passwordInput.value = '';
+                        passwordInput.focus();
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

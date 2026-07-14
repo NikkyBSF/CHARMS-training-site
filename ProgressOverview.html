@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Progress - An Overview</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="Java.js"></script>
+    </head>
+        <header>
+            <img src="Images/logo-blueSky.svg" alt="Blue Sky Logo">
+            <div display="flex-container" style="height: 100%;background-color: lightblue;">
+                <div class= "navLinks"><center><nav>     
+                    <a href="index.html">Start here</a>
+                    <a href= "LoggingOn.html">Logging On</a>
+                    <A href="DataStreams.html">Data Streams</A>
+                    <a href="searchingForRecords.html">Searching for Records</a>
+                    <a href="ProgressOverview.html">Progress Overview</a>
+                    <a href="CreatingProgress.html">Creating Progress</a>
+                    <a href="SharingProgress.html">Sharing Progress</a>
+                    <a href="AttachingDocs.html">Attaching Docs</a>
+                    <a href="UsingOMG.HTML">Using OMG</a>
+                    <a href="SendingInfo.html">Sending Info</a>
+                    <a href="TheEnd.html">The End</a><br></center>
+                </nav>
+                <div class="furtherResources"   display =   "flex">
+                        <a href =   "FurtherResources.html" style="color: black;">Further Resources</a>
+                        <a href="GuidanceDocs.html" style="color: black;">Guidance Documents</a>
+                        <a href="ChangeLog.html" style="color: black;">Change Log</a>
+                </div>
+            </div>
+        </header> 
+          <body bgcolor=#2ab7d5> 
+           <div class="IntroBox"> 
+                <center><h1>Progress - An Overview</h1>
+                </center>
+            </div>
+            <div class="InstructionBox">
+                <center>
+                    <div class="video-callout">
+                        <div class="video-callout-content">
+                            <div style="display: flex; align-items: center; justify-content: center; gap: 0.5em; margin: 5px 0 0;">
+                                <img src="images/SoniaPointingDownRight.png" alt="Sonia pointing" style="max-width: 70px; height: auto; transform: scaleX(1); -webkit-transform: scaleX(1); -moz-transform: scaleX(1); -ms-transform: scaleX(1); -o-transform: scaleX(1);">
+                                <div class="white-box-title">Progress - An Overview</div>
+                            </div>
+                            <a href="Videos/An overview of progress for staff.mp4#t=4" target="_blank" style="display: block; margin-top: 0;">Watch the video here</a>
+                            <div style="margin-top: 1em; color: black; font-size: large; margin-top: 60px;">
+                                Return to this Browser Tab when you have finished watching the video.<br>
+                                Then answer the question below.<br>
+                                When you are ready, click "Next Page".
+                            </div>
+                        </div>
+                    </div>
+                </center>
+            </div>
+                  
+            <div class="InstructionBox">
+                 <center>
+                    Now log into CHARMS using the button below (if you aren't already logged in).<br>
+                    <a href="https://bsnbluesky.mycharms.uk/charmsuser/logon/login" target="_blank">
+                        <button
+                        type="button" 
+                        id="CHARMS">
+                        Go to CHARMS
+                        </button>
+                    </a> <br>
+                    Go to the Training Module and find Tim Wallnut, (Child ID 21772).  <br><br>
+                    Navigate to Progress and filter using the keyword “Potential”. <br><br>
+                    How many progress actions contain the phrase “Potential Link”? Click below to find the answer.<br><br>
+                    
+                    <input 
+                        style="font-size: medium;"
+                        type="text"
+                        id="answer">
+                <button 
+                        style="background-color: greenyellow; font-size: medium;"
+                onclick="progressNum()">Submit Answer</button>           
+                        <p id="IncorrectAnswer"></p>
+                        <p id="correctAnswer"></p>
+                        <p id="Almost!"></p></Center>
+
+    <script>
+        function progressNum() {
+            var response= document.getElementById("answer");
+            var answerEntered= response.value;
+                console.log("User Entered answer: ", answerEntered);
+                    var midName= "11";
+                        if(answerEntered == midName){
+                        console.log("correct!");
+                    var paraElem =
+                        document.getElementById("correctAnswer");
+                        paraElem.innerHTML="That's correct. There are 11 Progress Actions containing the phrase potential link. This was a trick question as ticking the included in notes box reveals there is a Progress Action where the phrase is used in the notes section."
+                    }
+                        else if(answerEntered == 10){
+                        console.log("Almost!");
+                    var paraElem =
+                        document.getElementById("Almost!");
+                        paraElem.innerHTML="Almost! Try ticking the include notes checkbox, and see what difference that makes to the result."
+                    }
+                    
+                    else{
+                        console.log("incorrect!");
+                        var paraElem =
+                        document.getElementById("IncorrectAnswer");
+                        paraElem.innerHTML="That's not correct! Filter the Progress by the phrase potential link, and try again."
+                    }
+                }
+    </script>
+            <center>
+        <center>
+                </center>
+            </div>
+            <div id="box-NextPage"
+            style="margin-top: 2em; height:7em;">
+            <center>
+                <a href="CreatingProgress.html">
+                    <button 
+                    type="button" 
+                    id="btn-NextPage">
+                    Next Page
+                    </button>
+                </a>
+            
+            </center>
+            <img id="SULogo"src="Images/CHARMS Super-User Logo.png"> 
+          </body>
+</html>

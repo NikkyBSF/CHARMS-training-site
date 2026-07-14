@@ -1,0 +1,329 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.landing-body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2ab7d5, #0f5a8a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-container {
+    width: min(92vw, 480px);
+}
+
+.landing-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.landing-logo {
+    max-width: 220px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.landing-intro {
+    margin-bottom: 1.25rem;
+    color: #234;
+}
+
+.landing-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: left;
+}
+
+.landing-form label {
+    font-weight: bold;
+}
+
+.landing-form input {
+    padding: 0.75rem;
+    border: 1px solid #b8d4e8;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.landing-form button {
+    padding: 0.8rem 1rem;
+    border: 0;
+    border-radius: 8px;
+    background: #0b5fff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.landing-error {
+    min-height: 1.25rem;
+    margin-top: 0.75rem;
+    color: #b30000;
+    font-weight: bold;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1em;
+    padding-right:1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color:white;
+    overflow: auto;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    padding-left: .5em;
+    padding: right 0.5em;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.navLinks{
+    display: flex;
+}
+.furtherResources{
+    background-color: lightskyblue;
+    margin-left: .5em;
+    margin-rright:.5em
+    padding-left: 2em;
+    width: 25%;
+}
+.IntroBox {
+    color: white;
+    font-size:x-large;
+    display: flex;
+    flex-direction: column;
+    min-height: 10vh;
+    padding-bottom: 2em;
+}
+
+.IntroBox h1,
+.white-box-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.InstructionBox {
+    color: white;
+    font-size:x-large;
+    display: flex;
+    flex-direction: column;
+    min-height: 10vh;
+    margin:1em
+}
+
+.video-callout {
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 1.5em;
+    border-radius: 8px;
+    margin: 0.5em auto 0;
+    text-align: center;
+    width: min(100%, 760px);
+}
+
+.video-callout-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.video-callout-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.video-callout-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.video-callout-link {
+    margin-top: 0.5em;
+}
+
+.video-callout-text {
+    margin-top: 0.25em;
+    color: black;
+    font-size: large;
+}
+
+.video-callout img {
+    max-width: 70px;
+    height: auto;
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    flex-shrink: 0;
+    margin-top: 0;
+}
+
+.video-callout a {
+    color: #0b5fff;
+    text-decoration: underline;
+}
+video {
+    border: 1px solid black;
+    border-width: thick;
+    width: 70%;
+}
+.footerBox{
+    display: flex;
+    margin-top: 2em;
+    height:7em;
+}
+.fin{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1em;
+    padding-right:1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color:white;
+    overflow: auto;
+}
+.footerLeft{
+    height: 7em;
+    width:50%;
+    border-color: black;
+    flex: 50%;
+    color: white;
+}
+.footerLogo{
+    width: 5%;
+    position: fixed;
+    right:10px;
+    bottom: 10px;
+    background-image: url(Images/CHARMS\ Super-User\ Logo.png);
+    background-repeat: no-repeat;
+}
+#btn-NextPage{
+    color: white;
+    font-weight: bold;
+    font-size:medium;
+    background-color: blue;
+    border-radius: 5px; 
+    margin: 1em;
+    padding: 10px 24px;
+}
+#box-NextPage{
+    margin-top: 1em; 
+    height:7em;
+}
+#CHARMS{
+    background-color: orangered;
+    color: white;
+    font-weight: bold;
+    font-size:medium;
+    border-radius: 5px;
+    margin: 1em;
+    padding: 10px 24px;
+}
+#SULogo{
+    width:5%;
+    position: fixed;
+    right: .5em;
+    bottom: .5em;
+}
+#btn-No{
+    color: white;
+    font-weight: bold;
+    font-size:medium;
+    background-color: plum;
+    border-radius: 5px; 
+    margin: 1em;
+    padding: 10px 24px;
+}
+#btn-Yes{
+    color: white;
+    font-weight: bold;
+    font-size:medium;
+    background-color: goldenrod;
+    border-radius: 5px; 
+    margin: 1em;
+    padding: 10px 24px;
+}
+#download-btn{
+    color: white;
+    font-weight: bold;
+    font-size:medium;
+    background-color: green;
+    border-radius: 5px; 
+    margin: 1em;
+    padding: 10px 24px;
+}
+#view-btn{
+    color: white;
+    font-weight: bold;
+    font-size:smaller;
+    background-color: blue;
+    border-radius: 4px; 
+    margin: 1em;
+    padding: 1px 24px;
+}
+#Answer1{
+    color: white;
+    font-weight: bold;
+    font-size:medium;
+    background-color: maroon;
+    border-radius: 5px; 
+    margin: 1em;
+    padding: 10px 24px;
+}
+.flex-container {
+   
+    height:min-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding-top: 1em;
+    padding-bottom: 1em; 
+  }
+  
+  .flex-items{
+    background-color: paleturquoise;
+    padding-top: 1em;
+    height: 14em;
+    width: 20%;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    border: 3px solid white;
+  }
+  .vidTitle{
+    color: black;
+    font-size:large;
+    display: flex;
+    flex-direction: column;
+    min-height: 10vh;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    text-align: center;}
