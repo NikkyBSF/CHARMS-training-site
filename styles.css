@@ -71,8 +71,10 @@ body{
 
 header {
     display: flex;
+    flex-wrap: wrap; /* allow nav and resources to stack */
     justify-content: space-between;
     align-items: center;
+    gap: 0.5em 1em;
     padding-left: 1em;
     padding-right:1em;
     padding-top: 1em;
@@ -80,22 +82,65 @@ header {
     background-color:white;
     overflow: auto;
 }
-nav a{
+nav a {
     text-decoration: none;
-    color: black;
-    padding-left: .5em;
-    padding: right 0.5em;
-    font-family:Arial, Helvetica, sans-serif;
+    color: #00303f;
+    background-color: #eaf6ff;
+   padding: 0.6em 0.9em; /* increased vertical padding for vertical gap */
+    margin: 0 0.35em;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    border-radius: 999px; /* full pill */
+    transition: background-color 0.12s ease, color 0.12s ease, transform 0.06s ease;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.04);
 }
+
+nav a:hover, nav a:focus {
+    background-color: #0b5fff;
+    color: #ffffff;
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+nav a:active {
+    transform: translateY(0);
+}
+
+nav a:focus {
+    outline: 3px solid rgba(11,95,255,0.16);
+    outline-offset: 3px;
+}
+
 .navLinks{
-    display: flex;
+   display: flex;
+   flex-wrap: wrap; /* allow pills to wrap to next line */
+   gap: 0.5em 0.35em; /* vertical and horizontal gaps between pills */
+   align-items: center;
 }
 .furtherResources{
     background-color: lightskyblue;
     margin-left: .5em;
-    margin-rright:.5em
-    padding-left: 2em;
-    width: 25%;
+    margin-right: .5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    flex: 0 0 auto;
+    display: flex;
+    gap: 0.75em;
+    align-items: center;
+    justify-content: center;
+}
+
+/* When header wraps, make furtherResources take full width so it stacks below nav */
+@media (max-width: 920px) {
+    .furtherResources {
+        flex-basis: 100%;
+        width: 100%;
+        justify-content: center;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        background-color: transparent; /* less visual weight on small screens */
+    }
 }
 .IntroBox {
     color: white;
@@ -330,4 +375,4 @@ video {
     min-height: 10vh;
     padding-bottom: 1em;
     padding-top: 1em;
-    text-align: center;}
+    text-align: center;}\n/* Active nav pill */\n.navLinks a.active {\n    background-color: #024e9f; /* darker blue for active page */\n    color: #ffffff;\n    box-shadow: 0 2px 6px rgba(2,78,159,0.18);\n    transform: translateY(-1px);\n}\n\n/* Keep active pill visibly distinct on hover */\n.navLinks a.active:hover {\n    background-color: #013a6a;\n    color: #ffffff;\n    transform: translateY(-1px);\n}\n
