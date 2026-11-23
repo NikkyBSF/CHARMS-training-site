@@ -6,7 +6,7 @@
         <header>
             <img src="Images/logo-blueSky.svg" alt="Blue Sky Logo">
             <div display="flex-container" style="height: 100%;background-color: lightblue;">
-                <div class= "navLinks"><center><nav>     
+                                <div class= "navLinks"><center><nav>     
                     <a href="index.html">Start here</a>
                     <a href= "LoggingOn.html">Logging On</a>
                     <A href="DataStreams.html">Data Streams</A>
@@ -17,7 +17,8 @@
                     <a href="AttachingDocs.html">Attaching Docs</a>
                     <a href="UsingOMG.HTML">Using OMG</a>
                     <a href="SendingInfo.html">Sending Info</a>
-                    <a href="TheEnd.html">The End</a><br></center>
+                    <a href="UsingCHARMSDiary.html">Using the CHARMS diary</a>
+                    <a href="TheEnd.html" class="active">The End</a><br></center>
                 </nav>
                 <div class="furtherResources"   display =   "flex">
                         <a href =   "FurtherResources.html" style="color: black;">Further Resources</a>
@@ -27,18 +28,37 @@
             </div>
         </header> 
           <body bgcolor=#2ab7d5> 
-            <audio autoplay>
-                <source src="/Videos/607407__colorscrimsontears__fanfare-3-rpg.wav" type="audio/wav">
-            </audio>
+            <audio id="fanfare-audio" src="Videos/fanfare.m4a" preload="auto"></audio>
+            <script>
+            document.addEventListener('DOMContentLoaded', function(){
+              const audio = document.getElementById('fanfare-audio');
+              function showPlayButton(){
+                if (document.getElementById('play-fanfare')) return;
+                const btn = document.createElement('button');
+                btn.id = 'play-fanfare';
+                btn.textContent = 'Play fanfare';
+                btn.style = 'position: fixed; bottom: 1em; left: 50%; transform: translateX(-50%); padding: 0.6em 1em; font-weight: 700; z-index: 1000; background: #0b5fff; color: white; border-radius: 6px; border: none;';
+                btn.addEventListener('click', function(){ audio.play().catch(()=>{}); btn.remove(); });
+                document.body.appendChild(btn);
+              }
+              const p = audio.play();
+              if (p !== undefined) {
+                p.then(()=>{}).catch(()=>{ showPlayButton(); });
+              } else {
+                showPlayButton();
+              }
+            });
+            </script>
             <div style="
                         color:white;
                         font-size: 3em;
                         font-weight: bolder;
                 ">
                 <center>
-                    <br>Well done! <br><br>
+                    <br>Well done! <br>
+                    <button id="replay-fanfare" onclick="document.getElementById('fanfare-audio').play().catch(()=>{});" style="background:#0b5fff;color:#fff;border:none;border-radius:6px;padding:0.6em 1em;font-weight:700;">Replay fanfare</button>
                 </center>
-            </div>
+            </div><br>
            
                 <div class="IntroBox">
                     <center>
@@ -72,3 +92,5 @@
                 
           </body>
 </html>
+
+
