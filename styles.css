@@ -29,6 +29,14 @@ body{
     margin-bottom: 1rem;
 }
 
+header > img {
+    max-width: 220px;
+    max-height: 110px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
 .landing-intro {
     margin-bottom: 1.25rem;
     color: #234;
